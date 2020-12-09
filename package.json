@@ -1,0 +1,21 @@
+{
+  "name": "@payactive/app-common",
+  "version": "0.0.1",
+  "description": "Common components for payactive React applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@ssh.dev.azure.com:v3/payactive/payactive/app-common"
+  },
+  "keywords": [
+    "react",
+    "common",
+    "shared",
+    "components"
+  ],
+  "author": "",
+  "license": "ISC"
+}
