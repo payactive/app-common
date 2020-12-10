@@ -4,9 +4,7 @@
   "description": "Common components for payactive React applications",
   "main": "./src/index.js",
   "scripts": {
-    "test": "react-scripts test",
-    "prepare": "npm run build",
-    "build": "webpack src/index.js dist/index.js"
+    "test": "react-scripts test"
   },
   "repository": {
     "type": "git",
