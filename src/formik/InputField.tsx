@@ -1,5 +1,5 @@
 import { TextField, TextFieldProps } from '@material-ui/core';
-import { useField } from 'Formik';
+import { useField } from 'formik';
 import { at } from 'lodash';
 import React, { FunctionComponent } from 'react';
 
