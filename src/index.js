@@ -1,6 +1,6 @@
-const printMsg = function () {
-    console.log("This is a message from the demo package");
-}
-export {printMsg} 
+import InputField from './InputField';
+import CheckboxField from './CheckboxField';
+import SelectField from './SelectField';
+import SizedTextInputField from './SizedTextInputField';
 
-export * from './formik';
+export { InputField, CheckboxField, SelectField, SizedTextInputField };
