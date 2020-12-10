@@ -1,7 +1,7 @@
 import { TextField, TextFieldProps } from '@material-ui/core';
 import { useField } from 'formik';
 import { at } from 'lodash';
-import React, { FunctionComponent } from 'react';
+import React from 'react';
 
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
     placeholder?: string;
 }
 
-const InputField: FunctionComponent <Props & TextFieldProps> = ({name, ...rest}) => {
+const InputField: React.FC <Props & TextFieldProps> = ({name, ...rest}) => {
 
     const [field, meta] = useField(name);
     const [touched, error] = at(meta, 'touched', 'error');
