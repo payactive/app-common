@@ -38,3 +38,5 @@ const App: React.FC<ICounterProps> = ({ className = '' }) => {
 }
 
 export default App
+
+export * from './formik'

@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "test": "react-scripts test"
   },
   "repository": {
     "type": "git",
@@ -33,5 +34,12 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@testing-library/react": "^11.1.0",
+    "@types/jest": "^26.0.18",
+    "@types/lodash": "^4.14.165",
+    "formik": "^2.2.5"
+  }
 }
