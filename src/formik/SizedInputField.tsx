@@ -1,14 +1,19 @@
 import React from 'react';
 import InputField from './InputField';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import { Typography } from '@material-ui/core';
+import { Typography, TextFieldProps } from '@material-ui/core';
 
-export default function SizedTextInputField(props) {
+interface Props {
+    value: string,
+    name: string,
+    max: number,
+    type: string
+}
 
-  const { max = 140, value } = props;
+const SizedTextInputField: React.FC<Props & TextFieldProps> = ({max, value, ...rest }) => {
 
   return (
-    <InputField {...props}
+    <InputField {...rest}
       InputProps={{
         endAdornment: (
           <InputAdornment position="start">
@@ -20,3 +25,5 @@ export default function SizedTextInputField(props) {
     />
   );
 }
+
+export default SizedTextInputField 
