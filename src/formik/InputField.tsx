@@ -10,9 +10,9 @@ interface Props {
     placeholder?: string;
 }
 
-const InputField: FunctionComponent <Props & TextFieldProps> = (props) => {
+const InputField: FunctionComponent <Props & TextFieldProps> = ({name, ...rest}) => {
 
-    const [field, meta] = useField(props.name);
+    const [field, meta] = useField(name);
     const [touched, error] = at(meta, 'touched', 'error');
 
     function _renderHelperText() {
@@ -27,6 +27,7 @@ const InputField: FunctionComponent <Props & TextFieldProps> = (props) => {
             error={touched && error && true}
             helperText={_renderHelperText()}
             {...field}
+            {...rest}
         />
     );
 }
