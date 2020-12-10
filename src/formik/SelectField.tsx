@@ -1,16 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { at } from 'lodash';
-import { useField } from 'formik';
 import {
-  InputLabel,
-  FormControl,
-  Select,
-  MenuItem,
-  FormHelperText,
-  SelectProps,
-  FormControlProps
+    FormControl,
+    FormControlProps, FormHelperText, InputLabel,
+    MenuItem, Select,
+    SelectProps
 } from '@material-ui/core';
+import { useField } from 'formik';
+import { at } from 'lodash';
+import React from 'react';
 
 interface Data {
     label: string,
@@ -22,15 +18,17 @@ interface Props {
     name: string
 }
 
-const SelectField:React.FC<Props & SelectProps & FormControlProps> = (props) => {
-  const { label, data, ...rest } = props;
+const SelectField:React.FC<Props & SelectProps & FormControlProps> = ({name, label, data, ...rest}) => {
+
   const [field, meta] = useField(name);
   const { value: selectedValue } = field;
   const [touched, error] = at(meta, 'touched', 'error');
   const isError = touched && error && true;
-  function _renderHelperText() {
+  function _renderHelperText(): React.ReactElement | null{
     if (isError) {
-      return <FormHelperText>{error}</FormHelperText>;
+      return <FormHelperText>{error}</FormHelperText>
+    } else {
+        return null
     }
   }
 
