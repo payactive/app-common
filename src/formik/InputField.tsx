@@ -8,7 +8,7 @@ interface Props {
     name: string
     type: string
     placeholder?: string
-    className: string | undefined
+    className?: string | undefined
 }
 
 const InputField: React.FC <Props & TextFieldProps> = ({name, className, ...rest}) => {
