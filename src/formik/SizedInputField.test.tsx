@@ -15,7 +15,7 @@ test('renders all form fields', () => {
     >
       {(values) => (
         <Form>
-          <SizedTextInputField value={values.values.email} name="email" max={50} type="email" />
+          <SizedTextInputField className="formControl" value={values.values.email} name="email" max={50} type="email" />
         </Form>
       )}
     </Formik>
