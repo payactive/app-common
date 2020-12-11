@@ -5,12 +5,13 @@ import React from 'react';
 
 
 interface Props {
-    name: string;
-    type: string;
-    placeholder?: string;
+    name: string
+    type: string
+    placeholder?: string
+    className: string
 }
 
-const InputField: React.FC <Props & TextFieldProps> = ({name, ...rest}) => {
+const InputField: React.FC <Props & TextFieldProps> = ({name, className, ...rest}) => {
 
     const [field, meta] = useField(name);
     const [touched, error] = at(meta, 'touched', 'error');
@@ -26,6 +27,7 @@ const InputField: React.FC <Props & TextFieldProps> = ({name, ...rest}) => {
         <TextField
             error={touched && error && true}
             helperText={_renderHelperText()}
+            className={className}
             {...field}
             {...rest}
         />
