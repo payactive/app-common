@@ -11,7 +11,7 @@ interface Props {
     className?: string | undefined
 }
 
-const InputField: React.FC <Props & TextFieldProps> = ({name, className, ...rest}) => {
+const InputField: React.FC <Props & TextFieldProps > = ({name, className, ...rest}) => {
 
     const [field, meta] = useField(name);
     const [touched, error] = at(meta, 'touched', 'error');
