@@ -21,7 +21,7 @@ WithIcon.args = {
 };
 
 export const WithIconAndError = Template.bind({});
-WithError.args = {
+WithIconAndError.args = {
   icon: 'account_circle',
   name: 'User Name',  
   defaultValue: "Wrong user name",
