@@ -1,5 +1,5 @@
 import React from 'react';
-import InputField from './InputField';
+import FormikInputField from './FormikInputField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { Typography, TextFieldProps } from '@material-ui/core';
 
@@ -10,10 +10,10 @@ interface Props {
     type: string
 }
 
-const SizedTextInputField: React.FC<Props & TextFieldProps> = ({max, value, ...rest }) => {
+const FormikSizedTextInputField: React.FC<Props & TextFieldProps> = ({max, value, ...rest }) => {
 
   return (
-    <InputField {...rest}
+    <FormikInputField {...rest}
       InputProps={{
         endAdornment: (
           <InputAdornment position="start">
@@ -26,4 +26,4 @@ const SizedTextInputField: React.FC<Props & TextFieldProps> = ({max, value, ...r
   );
 }
 
-export default SizedTextInputField 
+export default FormikSizedTextInputField 

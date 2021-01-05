@@ -1,6 +1,6 @@
-import React from 'react';
-import { Alert as MaterialUiAlert } from '@material-ui/lab';
 import { Icon } from '@material-ui/core';
+import { Alert as MaterialUiAlert } from '@material-ui/lab';
+import React from 'react';
 
 type Severity = 'success' | 'warning' | 'error'
 

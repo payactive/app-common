@@ -22,28 +22,28 @@ interface InputFieldProps {
     icon?: string
 }
 
-const InputField: React.FC<InputFieldProps & TextFieldProps> = ({ name, label, placeholder, id, icon, error, ...rest }) => {
+const InputField: React.FC<InputFieldProps & TextFieldProps> = ({ name, className, label, placeholder, id, icon, error, ...rest }) => {
 
     const classes = useStyles()
 
     return (
-        <div className={classes.margin}>
-            <Grid container spacing={1} alignItems={error ? 'center' : 'flex-end'}>
-                {icon &&
-                    <Grid item>
-                        <Icon className={classes.icon}>{icon}</Icon>
-                    </Grid>
-                }
-                <Grid item>
-                    <TextField
-                        id={id || name}
-                        label={label || name}
-                        placeholder={placeholder}
-                        error={error}
-                        {...rest} />
+
+        <Grid className={className} container spacing={1} alignItems={error ? 'center' : 'flex-end'}>
+            {icon &&
+                <Grid item xs={1}>
+                    <Icon className={classes.icon}>{icon}</Icon>
                 </Grid>
+            }
+            <Grid item xs={icon ? 11 : 12}>
+                <TextField                    
+                    id={id || name}
+                    label={label || name}
+                    placeholder={placeholder}
+                    error={error}
+                    {...rest} />
             </Grid>
-        </div>
+        </Grid>
+
     );
 }
 

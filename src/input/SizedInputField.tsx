@@ -1,8 +1,7 @@
 import { TextFieldProps, Typography } from '@material-ui/core';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import InputField, { InputFieldProps } from './InputField';
-import { useState } from 'react';
 
 
 
@@ -10,7 +9,7 @@ interface SizedInputFieldProps {
     max: number
 }
 
-const SizedInputField: React.FC<SizedInputFieldProps & InputFieldProps & TextFieldProps> = ({ max, onChange, ...rest }) => {
+const SizedInputField: React.FC<SizedInputFieldProps & InputFieldProps & TextFieldProps> = ({ max, onChange, defaultValue, ...rest }) => {
 
     const [size, setSize] = useState(0)
 

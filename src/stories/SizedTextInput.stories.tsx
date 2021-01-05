@@ -1,11 +1,9 @@
-import React from 'react';
+import { Container, TextFieldProps } from '@material-ui/core';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
-import { Story, Meta } from '@storybook/react/types-6-0';
-import SizedInputField, {SizedInputFieldProps}  from '../input/SizedInputField';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import React from 'react';
 import { InputFieldProps } from '../input/InputField';
-import { TextFieldProps } from '@material-ui/core';
-
-
+import SizedInputField, { SizedInputFieldProps } from '../input/SizedInputField';
 
 export default {
   title: 'Input/SizedInputField',
@@ -15,20 +13,24 @@ export default {
   },
 } as Meta;
 
-const Template: Story<SizedInputFieldProps & InputFieldProps & TextFieldProps> = (args) => <SizedInputField {...args} />;
+const Template: Story<SizedInputFieldProps & InputFieldProps & TextFieldProps> = (args) =>
+  <Container maxWidth='xs'>
+    <SizedInputField {...args} />
+  </Container>
+
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   max: 20,
   icon: 'account_circle',
-  name: 'User Name',  
+  name: 'User Name',
 };
 
 export const WithIconAndError = Template.bind({});
 WithIconAndError.args = {
   max: 20,
   icon: 'account_circle',
-  name: 'User Name',  
+  name: 'User Name',
   defaultValue: "Wrong user name",
   error: true,
   helperText: "this is an error"
