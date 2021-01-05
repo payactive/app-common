@@ -1,9 +1,9 @@
-import React from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
-import { Story, Meta } from '@storybook/react/types-6-0';
-import InputField, { InputFieldProps } from '../input/InputField';
-import { TextFieldProps } from '@material-ui/core';
-import Form from './Form';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import React from 'react';
+import InputField from '../input/InputField';
+import Form from './LoginForm';
+import RegistrationForm from './RegistrationForm';
 
 export default {
   title: 'Examples/Form',
@@ -13,9 +13,13 @@ export default {
   },
 } as Meta;
 
-const Template: Story<undefined> = (args) => (
+const Template: Story<undefined> = () => (
     <Form />
 );
-
 export const Login = Template.bind({});
+
+const RegistrationTemplate: Story<undefined> = () => (
+    <RegistrationForm />
+);
+export const Registration = RegistrationTemplate.bind({});
 

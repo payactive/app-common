@@ -9,7 +9,7 @@ interface SizedInputFieldProps {
     max: number
 }
 
-const SizedInputField: React.FC<SizedInputFieldProps & InputFieldProps & TextFieldProps> = ({ max, onChange, defaultValue, ...rest }) => {
+const SizedInputField: React.FC<SizedInputFieldProps & InputFieldProps & TextFieldProps> = ({ max, onChange, ...rest }) => {
 
     const [size, setSize] = useState(0)
 
@@ -21,12 +21,12 @@ const SizedInputField: React.FC<SizedInputFieldProps & InputFieldProps & TextFie
     }
 
     return (
-        <InputField            
+        <InputField
             onChange={_onChange}
             InputProps={{
                 endAdornment: (
                     <InputAdornment position="start">
-                        <Typography color='textSecondary' variant='caption'>{size} / {max}</Typography>
+                        <Typography color={size > max ? 'error' : 'textSecondary'} variant='caption'>{size} / {max}</Typography>
                     </InputAdornment>
                 )
             }}
