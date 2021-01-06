@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import { Button, InputField } from '../input';
 import FormikInputField from '../formik/FormikInputField';
 import FormikSizedTextInputField from '../formik/FormikSizedInputField';
-import SelectField from '../formik/SelectField';
+import SelectField from '../formik/FormikSelectField';
 
 
 const useStyles = makeStyles((theme) => ({

@@ -1,5 +1,6 @@
-import FormikInputField from './FormikInputField'
-// import FormikSizedInputField from './FormikSizedInputField'
-import SelectField from './SelectField';
+import FormikInputField from './FormikInputField';
+import FormikSelectField from './FormikSelectField';
+import FormikSizedInputField from './FormikSizedInputField';
 
-export { FormikInputField, SelectField }
+export { FormikInputField, FormikSelectField, FormikSizedInputField };
+

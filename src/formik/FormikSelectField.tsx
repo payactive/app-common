@@ -5,18 +5,18 @@ import {
   MenuItem, Select,
   SelectProps
 } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Icon from '@material-ui/core/Icon';
 import { useField } from 'formik';
 import { at } from 'lodash';
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import Icon from '@material-ui/core/Icon';
 
 interface Data {
   label: string,
   value: string
 }
 
-interface Props {
+interface SelectFieldProps {
   data: Data[],
   name: string,
   icon?: string
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => (
     }
   }));
 
-const SelectField: React.FC<Props & SelectProps & FormControlProps> = ({ name, icon, className, label, data, ...rest }) => {
+const SelectField: React.FC<SelectFieldProps & SelectProps & FormControlProps> = ({ name, icon, className, label, data, ...rest }) => {
 
   const classes = useStyles()
 
@@ -70,7 +70,6 @@ const SelectField: React.FC<Props & SelectProps & FormControlProps> = ({ name, i
           </Select>
           {_renderHelperText()}
         </FormControl>
-
       </Grid>
     </Grid>
 
@@ -78,3 +77,5 @@ const SelectField: React.FC<Props & SelectProps & FormControlProps> = ({ name, i
 }
 
 export default SelectField;
+
+export type { SelectFieldProps };

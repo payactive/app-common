@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { Form, Formik } from 'formik';
 import * as React from 'react';
-import SelectField from './SelectField';
+import SelectField from './FormikSelectField';
 
 
 test('renders all form fields', () => {
