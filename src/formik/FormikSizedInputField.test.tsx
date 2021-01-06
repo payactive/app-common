@@ -1,21 +1,21 @@
+import * as React from 'react'
 import { render } from '@testing-library/react';
 import { Form, Formik } from 'formik';
-import * as React from 'react';
-import InputField from './InputField';
+import FormikSizedTextInputField from './FormikSizedInputField';
 
 
 test('renders all form fields', () => {
 
   render(
     <Formik
-      onSubmit={() => console.log("")}
+      onSubmit={() => console.log("Submit")}
       initialValues={{
         "email": "andreas.finke@gmail.com"
       }}
     >
-      {() => (
+      {(values) => (
         <Form>
-          <InputField className={'formControl'} name="email" type="text" />
+          <FormikSizedTextInputField className="formControl" value={values.values.email} name="email" max={50} type="email" />
         </Form>
       )}
     </Formik>
