@@ -9,7 +9,7 @@ let theme = createMuiTheme({
       main: '#0198B5',
     },
     background: {
-      main: '#ECF2F6'
+      default: '#ECF2F6'
     },
     error: {
       main: '#B83B86',
@@ -20,15 +20,12 @@ let theme = createMuiTheme({
     success: {
       main: '#1BA39D',
     },
-    text: {
-      main: '#086992'
-    }
   },
   typography: {
     fontFamily: 'Noto Sans KR, sans-serif',
     button: {
       textTransform: 'none',
-      fontWeight: 'fontWeightLight'
+      fontWeight: 'lighter'
     }
   }
 })
