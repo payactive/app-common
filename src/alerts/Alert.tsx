@@ -23,6 +23,7 @@ const iconBySeverity = (severity: Severity) => {
 const Alert: React.FC<AlertProps> = ({ severity, onClose, children }) => {
     return (
         <MaterialUiAlert
+            style={{borderRadius: 8}}                    
             variant='filled'
             icon={<Icon>{iconBySeverity(severity)}</Icon>}
             severity={severity}

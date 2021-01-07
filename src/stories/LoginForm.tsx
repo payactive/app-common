@@ -2,8 +2,8 @@ import { Container, makeStyles } from '@material-ui/core';
 import { Form as FormikForm, Formik } from 'formik';
 import React from 'react';
 import * as Yup from 'yup';
-import { Button, InputField } from '../input';
 import FormikInputField from '../formik/FormikInputField';
+import { Button } from '../input';
 
 
 const useStyles = makeStyles((theme) => ({
