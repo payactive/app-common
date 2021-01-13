@@ -9,7 +9,7 @@ let theme = createMuiTheme({
       main: '#0198B5',
     },
     background: {
-      default: '#ECF2F6'
+      default: '#ECF2F6',
     },
     error: {
       main: '#B83B86',

@@ -3,10 +3,9 @@ import React from 'react';
 
 interface ButtonInputProps {
     name: string
-    label: string
-    loading: boolean
-    disabled: boolean
-    id?: string
+    label?: string
+    loading?: boolean
+    disabled?: boolean    
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -23,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Button: React.FC<ButtonInputProps & ButtonProps> = ({ name, label, id, disabled = false, loading = false, ...rest }) => {
+const Button: React.FC<ButtonInputProps & ButtonProps> = ({ name, label = name, disabled = false, loading = false, ...rest }) => {
 
     const classes = useStyles()
 
