@@ -1,11 +1,12 @@
-import { Button as MaterialUiButton, ButtonProps, CircularProgress, makeStyles } from '@material-ui/core';
+import { Button as MaterialUiButton, ButtonProps, CircularProgress, Icon, makeStyles } from '@material-ui/core';
 import React from 'react';
 
 interface ButtonInputProps {
     name: string
     label?: string
     loading?: boolean
-    disabled?: boolean    
+    disabled?: boolean
+    icon?: string     
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Button: React.FC<ButtonInputProps & ButtonProps> = ({ name, label = name, disabled = false, loading = false, ...rest }) => {
+const Button: React.FC<ButtonInputProps & ButtonProps> = ({ name, label = name, disabled = false, loading = false, icon, ...rest }) => {
 
     const classes = useStyles()
 
@@ -35,6 +36,9 @@ const Button: React.FC<ButtonInputProps & ButtonProps> = ({ name, label = name, 
             disabled={disabled || loading}
             autoCapitalize='none'
             {...rest}
+            startIcon={ icon && 
+                <Icon>{icon}</Icon>
+            }
         >
             { label}
             { loading && <CircularProgress size={24} className={classes.buttonProgress} />}

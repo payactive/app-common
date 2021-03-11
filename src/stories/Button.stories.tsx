@@ -30,3 +30,9 @@ Loading.args = {
   label: 'Weiter',
   loading: true
 };
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  label: 'Speichern',  
+  icon: 'lock'  
+};
