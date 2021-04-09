@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import TileButton, { TileButtonProps } from '../input/NewButton';
+import TileButton, { TileButtonProps } from '../input/TileButton';
 
 export default {
   title: 'Input/TileButton',
@@ -39,4 +39,4 @@ NoSelectedWithOutIcon.args = {
   subTitle: '69 €',
 };
 
-  
+

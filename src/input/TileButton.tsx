@@ -14,31 +14,41 @@ interface TileButtonProps {
 const useStyles = makeStyles((theme) => ({
     buttonSelected: {
         backgroundColor: 'white',
-        color: '#38b2cc',
-        width: '9em',
-        height: '5em'
+        color: theme.palette.secondary.main,
+        width: '9.5em',
+        height: '6.5em'
     },
     buttonNotSelected: {
        backgroundColor: 'rgba(56,178,204,0.4)',
-        color: '#38b2cc',
-        width: '9em',
-        height: '5em'
+       opacity: '60%',
+        color: theme.palette.secondary.main,
+        width: '9.5em',
+        height: '6.5em'
     },
     titles: {
         display: 'flex',
         flexDirection: 'column'
     },
+    title: {
+        fontWeight: 'bold',
+        letterSpacing: '1px'
+
+    },
     percentSmall: {
-        width: theme.spacing(3),
-        height: theme.spacing(3),
+        width: theme.spacing(4.5),
+        height: theme.spacing(4.5),
         position: 'absolute',
         right: '-5px',
         top:'-7px',
         backgroundColor: 'black',
         color: '#38b2cc',
-        fontSize: '8px'
+        fontFamily: 'arial',
+        fontSize: '13px',
+        fontWeight: 'bold'
       },
 }));
+
+
 
 
 
@@ -58,7 +68,7 @@ const TileButton: React.FC<TileButtonProps> = ({ title, subTitle, percent, backg
              {percent && <Avatar className={classes.percentSmall}>{percent}%</Avatar> }
             <Grid container className={classes.titles}>
                 <Grid  item >
-                    <Typography variant='h6' >
+                    <Typography variant='h6' className={classes.title}>
                         {title}
                     </Typography>
                 </Grid>
