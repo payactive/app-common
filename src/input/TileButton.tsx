@@ -1,4 +1,4 @@
-import { Button as MaterialUiButton, Grid, makeStyles, Avatar, Typography } from '@material-ui/core';
+import { Button as MaterialUiButton, ButtonProps, Grid, makeStyles, Avatar, Typography } from '@material-ui/core';
 import React from 'react';
 
 
@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-const TileButton: React.FC<TileButtonProps> = ({ title, subTitle, percent, backgroundColor, color, selected, ...rest }) => {
+const TileButton: React.FC<TileButtonProps & ButtonProps> = ({ title, subTitle, percent, backgroundColor, color, selected, ...rest }) => {
 
  const classes = useStyles()
  
