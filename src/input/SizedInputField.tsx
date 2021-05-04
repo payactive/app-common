@@ -23,10 +23,11 @@ const SizedInputField: React.FC<SizedInputFieldProps & InputFieldProps & TextFie
     return (
         <InputField
             onChange={_onChange}
+            max={max}
             InputProps={{
                 endAdornment: (
                     <InputAdornment position="start">
-                        <Typography color={size > max ? 'error' : 'textSecondary'} variant='caption'>{size} / {max}</Typography>
+                        <Typography color={size === max ? 'error' : 'textSecondary'} variant='caption'>{size} / {max}</Typography>
                     </InputAdornment>
                 )
             }}
