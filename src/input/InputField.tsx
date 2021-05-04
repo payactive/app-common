@@ -20,9 +20,10 @@ interface InputFieldProps {
     id?: string
     placeholder?: string
     icon?: string
+    max?: number
 }
 
-const InputField: React.FC<InputFieldProps & TextFieldProps> = ({ name, className, label, placeholder, id, icon, error, ...rest }) => {
+const InputField: React.FC<InputFieldProps & TextFieldProps> = ({ name, className, label, placeholder, id, icon, max, error, ...rest }) => {
 
     const classes = useStyles()
 
@@ -40,6 +41,7 @@ const InputField: React.FC<InputFieldProps & TextFieldProps> = ({ name, classNam
                     label={label || name}
                     placeholder={placeholder}
                     error={error}
+                    inputProps={{ maxLength: max }}
                     {...rest} />
             </Grid>
         </Grid>
