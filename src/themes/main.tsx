@@ -18,7 +18,7 @@ let theme = createMuiTheme({
       main: '#DDAF3B',
     },
     success: {
-      main: '#1BA39D',
+      main: '#11E0A0',
     },
   },
   typography: {
