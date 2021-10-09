@@ -13,3 +13,11 @@ Builds the UI components.
 Starts [Storybook](https://storybook.js.org/) and loads stories located in folder [stories](src/stories)
 
 ```npm run storybook```
+
+## Bump version
+
+```npm version patch```
+
+## Release to NPM registry
+
+```npm publish```
