@@ -97,7 +97,7 @@ const SplitButton: React.FC<SplitButtonInputProps & ButtonProps> = ({
               <Paper>
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList id="split-button-menu">
-                    {options.map((option, index) => (
+                    {options.map((option) => (
                       <MenuItem
                         key={option.id}
                         onClick={() => _onOptionClick(option)}
